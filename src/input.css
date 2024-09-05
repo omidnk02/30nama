@@ -28,4 +28,6 @@
 }
 * {
   font-family: Dana;
+  scrollbar-color: #f04442 #00000000;
+  scrollbar-width: thin;
 }

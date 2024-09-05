@@ -6,6 +6,7 @@
     <title>30nama</title>
     <link rel="stylesheet" href="./styles/output.css" />
     <link rel="stylesheet" href="../src/input.css" />
+    <link rel="icon" href="./images/favicon.ico" />
   </head>
   <body class="bg-zinc-900">
     <!-- All Apps Icon -->
@@ -113,69 +114,84 @@
     <!-- Header -->
     <header>
       <!-- Menu Mobile -->
-      <div>
-        <!-- Top Section -->
+      <div
+        class="md:hidden fixed h-24 bottom-0 left-0 right-0 flex items-center justify-around p-2 bg-zinc-900 shadow-black shadow-2xl z-10"
+      >
         <div
-          class="md:hidden fixed top-0 left-0 right-0 flex items-center justify-between h-24 p-6 bg-gradient-to-b from-zinc-950 border-t-4 border-red-500 z-10"
+          class="cursor-pointer p-2 flex flex-col justify-center items-center border-t-2 border-red-500"
         >
-          <!-- Logo -->
-          <div class="w-36 cursor-pointer">
-            <img src="./images/logo-dark.png" alt="logo 30nama dark-mode" />
-          </div>
-          <!-- Icon search & bell -->
-          <div class="flex items-center gap-x-6">
-            <svg
-              class="h-6 w-6 text-white cursor-pointer transition-colors hover:text-red-500"
-            >
-              <use href="#bell"></use>
-            </svg>
-            <svg
-              class="h-6 w-6 text-white cursor-pointer transition-colors hover:text-red-500"
-            >
-              <use href="#search"></use>
-            </svg>
-          </div>
+          <svg class="h-8 w-8 text-red-500">
+            <use href="#home"></use>
+          </svg>
+          <span class="text-red-500 mt-2">خانه</span>
         </div>
-        <!-- Bottom Section -->
         <div
-          class="md:hidden fixed h-24 bottom-0 left-0 right-0 flex items-center justify-around p-2 bg-zinc-900 shadow-black shadow-2xl z-10"
+          class="cursor-pointer p-2 flex flex-col justify-center items-center"
         >
-          <div
-            class="cursor-pointer p-2 flex flex-col justify-center items-center border-t-2 border-red-500"
-          >
-            <svg class="h-8 w-8 text-red-500">
-              <use href="#home"></use>
-            </svg>
-            <span class="text-red-500 mt-2">خانه</span>
-          </div>
-          <div
-            class="cursor-pointer p-2 flex flex-col justify-center items-center"
-          >
-            <svg class="h-8 w-8 text-white">
-              <use href="#bars-3"></use>
-            </svg>
-            <span class="text-white mt-2">منو</span>
-          </div>
-          <div
-            class="cursor-pointer p-2 flex flex-col justify-center items-center"
-          >
-            <svg class="h-8 w-8 text-white">
-              <use href="#newspaper"></use>
-            </svg>
-            <span class="text-white mt-2">اخبار</span>
-          </div>
-          <div
-            class="cursor-pointer p-2 flex flex-col justify-center items-center"
-          >
-            <svg class="h-8 w-8 text-white">
-              <use href="#user"></use>
-            </svg>
-            <span class="text-white mt-2">پروفایل</span>
-          </div>
+          <svg class="h-8 w-8 text-white">
+            <use href="#bars-3"></use>
+          </svg>
+          <span class="text-white mt-2">منو</span>
+        </div>
+        <div
+          class="cursor-pointer p-2 flex flex-col justify-center items-center"
+        >
+          <svg class="h-8 w-8 text-white">
+            <use href="#newspaper"></use>
+          </svg>
+          <span class="text-white mt-2">اخبار</span>
+        </div>
+        <div
+          class="cursor-pointer p-2 flex flex-col justify-center items-center"
+        >
+          <svg class="h-8 w-8 text-white">
+            <use href="#user"></use>
+          </svg>
+          <span class="text-white mt-2">پروفایل</span>
         </div>
       </div>
       <!-- Menu Desktop -->
-      <div></div>
+      <div
+        class="flex items-center justify-between fixed px-6 md:px-12 py-4 top-0 left-0 right-0 border-t-4 border-red-500 bg-gradient-to-b from-black z-20"
+      >
+        <!-- right section -->
+        <div class="flex items-center md:gap-x-4 lg:gap-x-12">
+          <div class="w-36 cursor-pointer">
+            <img src="./images/logo-dark.png" alt="logo-dark" />
+          </div>
+          <div>
+            <ul class="hidden lg:flex items-center text-white gap-x-9">
+              <a class=" " href="#">خانه</a>
+              <a class=" " href="#">فیلم و سریال</a>
+              <a class=" " href="#">۳۰نما باهم</a>
+              <a class=" " href="#">اخبار</a>
+              <a class=" " href="#">دسته‌بندی‌ها</a>
+              <a class=" " href="#">تماس با ما</a>
+            </ul>
+          </div>
+          <div class="hidden md:inline-block lg:hidden">
+            <svg class="text-white w-6 h-6"><use href="#bars-3"></use></svg>
+          </div>
+        </div>
+        <!-- left section -->
+        <div class="flex items-center gap-x-4">
+          <svg
+            class="hidden md:inline-block h-6 w-6 text-white cursor-pointer transition-colors hover:text-red-500"
+          >
+            <use href="#user"></use>
+          </svg>
+          <svg
+            class="h-6 w-6 text-white cursor-pointer transition-colors hover:text-red-500"
+          >
+            <use href="#bell"></use>
+          </svg>
+          <svg
+            class="h-6 w-6 text-white cursor-pointer transition-colors hover:text-red-500"
+          >
+            <use href="#search"></use>
+          </svg>
+        </div>
+      </div>
     </header>
     <!-- main -->
     <main>
@@ -211,21 +227,205 @@
           class="absolute bottom-0 left-0 right-0 h-screen bg-gradient-to-t from-zinc-900"
         ></div>
       </div>
-      <!-- Suggestion section  -->
-      <div class="flex items-center justify-between p-8">
-        <div class="flex items-center gap-2">
-          <svg class="h-6 w-6 text-white/80"><use href="#star"></use></svg>
-          <span class="text-xl text-white/80">پیشنهاد ویژه</span>
+      <!-- container  -->
+      <div class="container mx-auto">
+        <!-- Suggestion section  -->
+        <!-- top section -->
+        <div class="flex items-center justify-between p-8 mt-16">
+          <div class="flex items-center gap-2">
+            <svg class="h-6 w-6 text-white/80"><use href="#star"></use></svg>
+            <span class="text-xl text-white/80">ترندهای روز</span>
+          </div>
+          <div>
+            <button
+              class="text-white/60 border border-white/60 bg-black/20 py-2 px-4 rounded-md"
+            >
+              آرشیو کامل
+            </button>
+          </div>
         </div>
-        <div>
-          <button
-            class="text-white/60 border border-white/60 bg-black/20 py-2 px-4 rounded-md"
+        <!-- main section -->
+        <div
+          class="flex flex-wrap mx-2 md:mx-0 items-stretch justify-around gap-4"
+        >
+          <!-- box1 -->
+          <div class="hover:scale-105 transition-transform cursor-pointer">
+            <img
+              class="w-full rounded-md"
+              src="./images/movies/movie (1).webp"
+              alt=""
+            />
+          </div>
+          <!-- box2 -->
+          <div class="hover:scale-105 transition-transform cursor-pointer">
+            <img
+              class="w-full rounded-md"
+              src="./images/movies/movie (2).webp"
+              alt=""
+            />
+          </div>
+          <!-- box3 -->
+          <div class="hover:scale-105 transition-transform cursor-pointer">
+            <img
+              class="w-full rounded-md"
+              src="./images/movies/movie (3).webp"
+              alt=""
+            />
+          </div>
+          <!-- box4 -->
+          <div class="hover:scale-105 transition-transform cursor-pointer">
+            <img
+              class="w-full rounded-md"
+              src="./images/movies/movie (4).webp"
+              alt=""
+            />
+          </div>
+          <!-- box5 -->
+          <div class="hover:scale-105 transition-transform cursor-pointer">
+            <img
+              class="w-full rounded-md"
+              src="./images/movies/movie (5).webp"
+              alt=""
+            />
+          </div>
+          <!-- box6 -->
+          <div class="hover:scale-105 transition-transform cursor-pointer">
+            <img
+              class="w-full rounded-md"
+              src="./images/movies/movie (6).webp"
+              alt=""
+            />
+          </div>
+        </div>
+        <!-- info section -->
+        <h3 class="text-3xl text-white mt-16 mb-6 text-center">
+          دلایل بیشتر برای عضویت
+        </h3>
+        <div class="flex flex-wrap items-stretch justify-center gap-4 mb-12">
+          <!-- box1 -->
+          <div
+            class="bg-black/20 bg-gradient-to-b from-red-500/10 border border-red-800 rounded-md p-6 max-w-[360px] mx-2 md:mx-0 text-white"
           >
-            آرشیو کامل
-          </button>
+            <h4 class="text-2xl font-DanaDemibold mb-4 leading-10">
+              در تلویزیون خود لذت ببرید
+            </h4>
+            <p>
+              در تلویزیون هوشمند، گوشی اندروید و آی او اس و لپ تاپ خود از تماشا
+              فیلم در وب‌سایت ۳۰نما لذت ببرید.
+            </p>
+          </div>
+          <!-- box2 -->
+          <div
+            class="bg-black/20 bg-gradient-to-b from-red-500/10 border border-red-800 rounded-md p-6 max-w-[360px] mx-2 md:mx-0 text-white"
+          >
+            <h4 class="text-2xl font-DanaDemibold mb-4 leading-10">
+              فیلم های خود را برای تماشای آفلاین دانلود کنید
+            </h4>
+            <p>
+              موارد دلخواه خود را به راحتی ذخیره کنید و همیشه چیزی برای تماشا
+              داشته باشید.
+            </p>
+          </div>
+          <!-- box3 -->
+          <div
+            class="bg-black/20 bg-gradient-to-b from-red-500/10 border border-red-800 rounded-md p-6 max-w-[360px] mx-2 md:mx-0 text-white"
+          >
+            <h4 class="text-2xl font-DanaDemibold mb-4 leading-10">
+              همه جا تماشا کن
+            </h4>
+            <p>
+              فیلم‌ها و برنامه های تلویزیونی نامحدود را در تلفن، رایانه لوحی، لپ
+              تاپ و تلویزیون خود پخش کنید.
+            </p>
+          </div>
+          <!-- box4 -->
+          <div
+            class="bg-black/20 bg-gradient-to-b from-red-500/10 border border-red-800 rounded-md p-6 max-w-[360px] mx-2 md:mx-0 text-white"
+          >
+            <h4 class="text-2xl font-DanaDemibold mb-4 leading-10">
+              ایجاد پروفایل برای بچه ها
+            </h4>
+            <p>
+              بچه ها را با شخصیت های مورد علاقه خود در فضایی که فقط برای آنها
+              ساخته شده به ماجراجویی بفرستید
+            </p>
+          </div>
         </div>
       </div>
     </main>
-    <div class="h-96"></div>
+    <!-- Footer -->
+    <footer class="mb-32 md:mb-8 mx-2">
+      <div
+        class="container mx-auto lg:flex-row-reverse lg:flex lg:items-center lg:justify-center lg:gap-x-12 md:my-40"
+      >
+        <!-- input email -->
+        <div class="flex flex-col">
+          <h3 class="text-base text-white text-center md:text-start my-4">
+            آماده تماشا هستید؟ ایمیل خود را وارد کنید.
+          </h3>
+          <div>
+            <form
+              class="flex items-stretch justify-center gap-x-2 my-4"
+              action="#"
+              method="POST"
+            >
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                class="block px-4 py-2 border w-60 md:w-96 border-gray-300 rounded-md focus:outline-none sm:text-sm"
+                placeholder="ایمیل خود را وارد کنید"
+              />
+              <button
+                type="submit"
+                class="bg-red-500 text-white py-2 px-4 rounded-md focus:outline-none"
+              >
+                ارسال
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Link List -->
+        <div class="max-w-[720px]">
+          <h3 class="text-white md:text-right text-center my-4">
+            سوالی داری؟ تماس با ما
+          </h3>
+          <ul
+            class="flex flex-wrap items-center justify-center md:justify-start"
+          >
+            <a class="text-white border-r my-2 pr-2 w-36" href="#"
+              >پرسش و پاسخ</a
+            >
+            <a class="text-white border-r my-2 pr-2 w-36" href="#"
+              >مرکز راهنمایی
+            </a>
+            <a class="text-white border-r my-2 pr-2 w-36" href="#"
+              >حساب کاربری</a
+            >
+            <a class="text-white border-r my-2 pr-2 w-36" href="#"
+              >مرکز رسانه
+            </a>
+            <a class="text-white border-r my-2 pr-2 w-36" href="#"
+              >راه های تماشا
+            </a>
+            <a class="text-white border-r my-2 pr-2 w-36" href="#"
+              >شرایط استفاده
+            </a>
+            <a class="text-white border-r my-2 pr-2 w-36" href="#"
+              >حریم خصوصی</a
+            >
+            <a class="text-white border-r my-2 pr-2 w-36" href="#"
+              >تماس با ما
+            </a>
+            <a class="text-white border-r my-2 pr-2 w-36" href="#">درباره ما</a>
+            <a class="text-white border-r my-2 pr-2 w-36" href="#"
+              >دانلود اپلیکیشن</a
+            >
+          </ul>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
